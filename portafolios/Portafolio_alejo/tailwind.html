@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Alejandro Velez Gallego</title>
+    <!-- Incluye el CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Tailwind para usar la estrategia 'class' para el modo oscuro -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Habilita el modo oscuro basado en la clase 'dark' en el HTML
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#3b82f6', // Un azul brillante
+                        'accent': '#fbbf24', // Un amarillo de ejemplo
+                        'dark-bg': '#111827', // Fondo oscuro principal
+                        'dark-card': '#1f2937', // Fondo oscuro para tarjetas/secciones
+                        'dark-text': '#f3f4f6', // Texto claro
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<!-- El body usará bg-gray-100 por defecto y bg-dark-bg cuando tenga la clase 'dark' -->
+<body class="bg-gray-100 dark:bg-dark-bg font-sans transition-colors duration-500">
+
+    <!-- Selector de Modo Oscuro (Botón de Toggle) -->
+    <button id="theme-toggle" class="fixed top-4 right-4 p-3 rounded-full bg-gray-200 dark:bg-gray-700 shadow-lg text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 z-10">
+        <!-- Icono de Sol (visible en modo claro) -->
+        <svg id="sun-icon" class="h-6 w-6 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Icono de Luna (visible en modo oscuro) -->
+        <svg id="moon-icon" class="h-6 w-6 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </button>
+
+
+    <!-- Sección de Héroe (Hero Section) -->
+    <!-- Fondo blanco por defecto, gris muy oscuro en modo oscuro, transición suave -->
+    <section class="relative bg-white dark:bg-dark-card py-16 md:py-24 transition-colors duration-500 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <!-- Contenido de Texto -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <span class="inline-block bg-primary text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                        Estudiante de Ingeniería en Sistemas
+                    </span>
+                    <!-- Texto gris oscuro por defecto, texto claro en modo oscuro -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-dark-text leading-tight mb-4">
+                        Hola, soy <span class="text-primary">Alejandro Velez Gallego</span>
+                    </h1>
+                    <!-- Texto gris medio por defecto, texto gris claro en modo oscuro -->
+                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        Actualmente cursando mi 5° semestre de Ingeniería en Sistemas. Apasionado por la tecnología, el desarrollo de software y la resolución de problemas.
+                    </p>
+                    <!-- Botones de Acción -->
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#proyectos" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                            Ver Proyectos
+                        </a>
+                        <!-- Botón con borde: blanco/gris por defecto, oscuro/claro en modo oscuro -->
+                        <a href="#contacto" class="bg-white dark:bg-dark-card hover:bg-gray-200 dark:hover:bg-gray-700 text-primary dark:text-blue-400 border border-primary dark:border-blue-400 font-bold py-3 px-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagen/Ilustración -->
+                <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+                    <div class="w-64 h-64 lg:w-80 lg:h-80 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center shadow-xl overflow-hidden">
+                        <svg class="w-40 h-40 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM12 12A6 6 0 1012 0a6 6 0 000 12z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript para el Toggle de Modo Oscuro -->
+    <script>
+        // Lógica para manejar el cambio de tema manualmente y recordar la preferencia
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Función para establecer el tema
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Al cargar la página, verificar si hay una preferencia guardada
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Si no hay preferencia guardada, usar la del sistema operativo por defecto
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+
+        // Escuchar el clic en el botón para cambiar el tema
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        });
+    </script>
+</body>
+</html>
