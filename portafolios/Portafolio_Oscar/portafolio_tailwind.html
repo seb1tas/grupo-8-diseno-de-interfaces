@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Oscar Sequera</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body class="bg-gray-950 text-gray-200 font-sans scroll-smooth">
+
+  <nav class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-md z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-blue-500">OscarDev</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#about" class="hover:text-blue-400">Sobre mí</a></li>
+        <li><a href="#projects" class="hover:text-blue-400">Proyectos</a></li>
+        <li><a href="#skills" class="hover:text-blue-400">Habilidades</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-hero">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Hola, soy <span class="text-blue-400">Oscar Sequera</span></h1>
+    <h2 id="typing" class="text-xl md:text-2xl text-gray-300 typing mb-6"></h2>
+    <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-transform transform hover:scale-105">Ver proyectos</a>
+  </section>
+
+  <section id="about" class="py-20 max-w-5xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Sobre mí</h2>
+    <p class="text-lg text-gray-300">Soy desarrollador web con experiencia en diseño de interfaces, JavaScript y desarrollo front-end. Me encanta crear experiencias digitales modernas, limpias y funcionales. Mi objetivo es fusionar el diseño y la programación para construir productos que las personas disfruten usar.</p>
+  </section>
+
+  <section id="projects" class="py-20 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-blue-400 mb-10">Proyectos Destacados</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+          <img src="./gestiontareas.png" alt="Proyecto 1" class="w-full">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white mb-2">Gestor de Tareas</h3>
+            <p class="text-gray-400 mb-4">Aplicación web para organizar y priorizar tareas diarias.</p>
+            <a href="#" class="text-blue-400 hover:underline">Ver más →</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+          <img src="./landing.png" alt="Proyecto 2" class="w-full">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white mb-2">Landing Page Pro</h3>
+            <p class="text-gray-400 mb-4">Página moderna para mostrar servicios y proyectos personales.</p>
+            <a href="#" class="text-blue-400 hover:underline">Ver más →</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
+          <img src="./dashboard.png" alt="Proyecto 3" class="w-full">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white mb-2">Dashboard Interactivo</h3>
+            <p class="text-gray-400 mb-4">Panel administrativo con estadísticas y autenticación.</p>
+            <a href="#" class="text-blue-400 hover:underline">Ver más →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-20 max-w-5xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold text-blue-400 mb-10">Habilidades</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="space-y-4">
+        <div>
+          <p class="flex justify-between text-gray-300"><span>HTML / CSS</span><span>90%</span></p>
+          <div class="w-full bg-gray-800 h-3 rounded-full"><div class="bg-blue-500 h-3 rounded-full w-[90%]"></div></div>
+        </div>
+        <div>
+          <p class="flex justify-between text-gray-300"><span>JavaScript</span><span>80%</span></p>
+          <div class="w-full bg-gray-800 h-3 rounded-full"><div class="bg-blue-500 h-3 rounded-full w-[80%]"></div></div>
+        </div>  
+      </div>
+      <div class="space-y-4">
+        <div>
+          <p class="flex justify-between text-gray-300"><span>Bootstrap 5</span><span>85%</span></p>
+          <div class="w-full bg-gray-800 h-3 rounded-full"><div class="bg-blue-500 h-3 rounded-full w-[85%]"></div></div>
+        </div>
+        <div>
+          <p class="flex justify-between text-gray-300"><span>Tailwind CSS</span><span>75%</span></p>
+          <div class="w-full bg-gray-800 h-3 rounded-full"><div class="bg-blue-500 h-3 rounded-full w-[75%]"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-gray-900 text-center">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Contáctame</h2>
+    <p class="text-gray-400 mb-4">¿Tienes un proyecto en mente o quieres colaborar?</p>
+    <a href="mailto:oasequeramartinez@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-transform hover:scale-105">Enviar correo</a>
+  </section>
+
+  <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+    © 2025 Oscar Sequera — Desarrollador Web
+  </footer>
+
+  <script>
+    const text = ["Desarrollador Web", "Diseñador UI", "Estudiante de Ingeniería"];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+
+    function type() {
+      if (count === text.length) count = 0;
+      currentText = text[count];
+      letter = currentText.slice(0, ++index);
+      document.getElementById("typing").textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+      } else {
+        setTimeout(type, 100);
+      }
+    }
+    type();
+  </script>
+
+</body>
+</html>
