@@ -1,192 +1,59 @@
-<!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Portafolio | Alejandro Velez Gallego</title>
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Portafolio Alejandro</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <!-- !Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/bootstrap.css">
+    </head>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts (Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="assets/bootstrap.css">
-</head>
-<body data-bs-spy="scroll" data-bs-target="#navbarNav">
-
-    <!-- 1. Barra de Navegación (Navbar) -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <!-- Tu nombre como marca -->
-            <a class="navbar-brand fw-bold" href="#inicio">Alejandro Velez Gallego</a>
+    <body>
+        <header>
+            <nav class="container-fluid">
+                <section id="seccion1" class="row">
+                        <div class="col">hola 1</div>
+                        <div class="col ms-6">hola 2</div>
+                        <div class="col">hola 3</div>
+                    
+                </section>
+            </nav>
             
-            <!-- Botón hamburguesa para móviles -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        </header>
+        <main>
+            <section class="" >
+
+            </section>
+        </main>
+        <footer>
             
-            <!-- Enlaces de navegación -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#acerca">Acerca de Mí</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#proyectos">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 2. Sección Hero (Inicio) -->
-    <header id="inicio" class="hero-section">
-        <div class="container px-4">
-            <h1 class="display-3 fw-bold mb-3">Alejandro Velez Gallego</h1>
-            <!-- Cambia este texto por tu título profesional -->
-            <p class="lead my-4">Desarrollador de Software | Apasionado por la Tecnología Web</p>
-            <a href="#proyectos" class="btn btn-primary btn-lg rounded-pill px-4 py-2 fw-bold">Ver mis proyectos</a>
-        </div>
-    </header>
-
-    <!-- 3. Sección "Acerca de Mí" -->
-    <section id="acerca" class="section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <!-- Columna para la imagen -->
-                <div class="col-lg-5 text-center">
-                    <!-- Placeholder de imagen. Reemplaza el src con tu foto -->
-                    <img src="https://placehold.co/400x400/343a40/f8f9fa?text=Tu+Foto+Aqu%C3%AD" 
-                         class="img-fluid profile-img" 
-                         alt="Retrato de Alejandro Velez Gallego"
-                         width="400" height="400">
-                </div>
-                <!-- Columna para el texto -->
-                <div class="col-lg-7">
-                    <h2 class="display-5 fw-bold mb-4">Hola, soy Alejandro.</h2>
-                    <p class="lead text-body-secondary">
-                        Soy un desarrollador de software creativo y orientado a resultados. Me especializo en [Tu Especialidad, ej: aplicaciones web con React y Node.js] y me encanta transformar ideas complejas en soluciones elegantes y funcionales.
-                    </p>
-                    <p>
-                        Aquí puedes escribir un poco más sobre ti: tu experiencia, tus pasiones, las tecnologías que dominas (Bootstrap, JavaScript, Python, etc.) y qué tipo de desafíos profesionales te motivan.
-                    </p>
-                    <a href="#contacto" class="btn btn-outline-primary rounded-pill px-4 mt-3">Hablemos</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Sección "Proyectos" -->
-    <section id="proyectos" class="section bg-body-tertiary">
-        <div class="container">
-            <h2 class="display-5 fw-bold text-center mb-5">Mis Proyectos</h2>
-            <div class="row g-4">
-
-                <!-- Proyecto 1 (Tarjeta) -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <!-- Reemplaza con una imagen de tu proyecto -->
-                        <img src="https://placehold.co/600x400/212529/f8f9fa?text=Proyecto+1" class="card-img-top" alt="Vista previa del Proyecto 1">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold fs-4">Nombre del Proyecto 1</h5>
-                            <p class="card-text text-body-secondary">Una breve descripción de tu proyecto. ¿Qué problema resuelve? ¿Qué tecnologías usaste?</p>
-                            <a href="#" class="btn btn-primary rounded-pill mt-2">Ver Demo <i class="bi bi-arrow-up-right-square"></i></a>
-                            <a href="#" class="btn btn-outline-secondary rounded-pill mt-2">Código <i class="bi bi-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 2 (Tarjeta) -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://placehold.co/600x400/212529/f8f9fa?text=Proyecto+2" class="card-img-top" alt="Vista previa del Proyecto 2">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold fs-4">Nombre del Proyecto 2</h5>
-                            <p class="card-text text-body-secondary">Otro proyecto increíble. Describe el desafío y cómo lo abordaste. Usa Bootstrap, React, Node.js, etc.</p>
-                            <a href="#" class="btn btn-primary rounded-pill mt-2">Ver Demo <i class="bi bi-arrow-up-right-square"></i></a>
-                            <a href="#" class="btn btn-outline-secondary rounded-pill mt-2">Código <i class="bi bi-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 3 (Tarjeta) -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://placehold.co/600x400/212529/f8f9fa?text=Proyecto+3" class="card-img-top" alt="Vista previa del Proyecto 3">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold fs-4">Nombre del Proyecto 3</h5>
-                            <p class="card-text text-body-secondary">Este proyecto muestra tus habilidades en [habilidad específica]. Fue un proyecto desafiante pero gratificante.</p>
-                            <a href="#" class="btn btn-primary rounded-pill mt-2">Ver Demo <i class="bi bi-arrow-up-right-square"></i></a>
-                            <a href="#" class="btn btn-outline-secondary rounded-pill mt-2">Código <i class="bi bi-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Sección "Contacto" -->
-    <section id="contacto" class="section text-center">
-        <div class="container" style="max-width: 700px;">
-            <h2 class="display-5 fw-bold mb-4">Hablemos</h2>
-            <p class="lead text-body-secondary mb-5">
-                Estoy buscando activamente nuevas oportunidades y me encantaría conectar.
-                ¡No dudes en enviarme un mensaje!
-            </p>
-            <div class="contact-icons">
-                <!-- Reemplaza 'tu-usuario' y tu email -->
-                <a href="mailto:tu-email@dominio.com" target="_blank" title="Email"><i class="bi bi-envelope-fill"></i></a>
-                <a href="https://www.linkedin.com/in/tu-usuario/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/tu-usuario" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Footer -->
-    <footer class="py-4 bg-body-tertiary text-center">
-        <div class="container">
-            <p class="mb-0 text-body-secondary">&copy; 2025 Alejandro Velez Gallego. Creado con <i class="bi bi-heart-fill text-danger"></i> y Bootstrap.</p>
-        </div>
-    </footer>
+        </footer>
+            
 
 
-    <!-- Bootstrap JS Bundle (requerido para el navbar móvil y otros componentes) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    <!-- Script simple para activar el "spy" del scroll -->
-    <script>
-        // Activa Bootstrap scrollspy en el elemento body
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: '#navbarNav',
-            offset: 100 // Ajusta este valor si tu navbar es más alto
-        });
 
-        // Cierra el menú móvil después de hacer clic en un enlace
-        const navLinks = document.querySelectorAll('.nav-link');
-        const menuToggle = document.getElementById('navbarNav');
-        const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
-        navLinks.forEach((link) => {
-            link.addEventListener('click', () => {
-                if (menuToggle.classList.contains('show')) {
-                    bsCollapse.hide();
-                }
-            });
-        });
-    </script>
-</body>
+
+        
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
