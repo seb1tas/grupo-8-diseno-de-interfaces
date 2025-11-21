@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma Académica "Lumi" - Inicio</title>
+    <title>Plataforma Académica "Lumi" - Acceso</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -55,6 +55,7 @@
         }
 
         .card {
+            background-color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: none;
         }
@@ -87,7 +88,7 @@
     <!-- Barra de Navegación Principal -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="usuario_normal.html">
+            <a class="navbar-brand fw-bold" href="index.html">
                 <i class="bi bi-lightbulb"></i>
                 Lumi
             </a>
@@ -95,18 +96,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
-                <!-- Links de navegación (se podrían ocultar/mostrar con JS) -->
+                <!-- Links de navegación (vacíos en login) -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="usuario_normal.html" id="nav-inicio">
-                            <i class="bi bi-house"></i> Inicio
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="nav-buscar">
-                            <i class="bi bi-search"></i> Buscar
-                        </a>
-                    </li>
                 </ul>
                 
                 <!-- Menú de Usuario (dinámico) -->
@@ -114,12 +105,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i>
-                            <span id="userMenuName" class="ms-1">Usuario</span>
+                            <span id="userMenuName" class="ms-1">Acceder</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuLink" id="userMenuDropdown">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill me-2"></i> Perfil</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Cerrar Sesión</a></li>
+                            <!-- Contenido dinámico por JS -->
+                            <li><a class="dropdown-item" href="index.html">Iniciar Sesión</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -130,68 +120,26 @@
     <!-- Contenedor Principal de Vistas -->
     <main class="container my-4">
 
-        <!-- VISTA: USUARIO NORMAL -->
-        <div id="normal-view">
-            <div class="row">
-                <!-- Sidebar (basado en boceto 1) -->
-                <div class="col-md-3">
+        <!-- VISTA: INICIO DE SESIÓN (Default) -->
+        <div id="login-view">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
                     <div class="card">
-                        <div class="card-header fw-bold">Categorías</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="#" class="text-decoration-none text-dark">Artículo Popular</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none text-dark">Proyecto Popular</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none text-dark">Investigación</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none text-dark">Laboratorio</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Contenido Principal (basado en boceto 1) -->
-                <div class="col-md-9">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h2 class="h4">Artículos Recientes</h2>
-                        <div class="dropdown">
-                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-filter"></i> Filtrar por
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Fecha</a></li>
-                                <li><a class="dropdown-item" href="#">Relevancia</a></li>
-                                <li><a class="dropdown-item" href="#">Popularidad</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Artículo 1 -->
-                    <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-3 d-flex align-items-center justify-content-center bg-light p-3">
-                                <!-- Portada (placeholder) -->
-                                <img src="https://placehold.co/400x400/a0c4ff/333?text=Portada" class="img-fluid rounded-start" alt="Portada Artículo 1">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body">
-                                    <h5 class="card-title">Artículo 1: El Impacto de la IA en la Academia</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <p class="card-text"><small class="text-muted">Publicado hace 3 días</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Artículo 2 -->
-                    <div class="card mb-3">
-                         <div class="row g-0">
-                            <div class="col-md-3 d-flex align-items-center justify-content-center bg-light p-3">
-                                <!-- Portada (placeholder) -->
-                                <img src="https://placehold.co/400x400/b6e2d3/333?text=Portada" class="img-fluid rounded-start" alt="Portada Artículo 2">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body">
-                                    <h5 class="card-title">Artículo 2: Nuevas Metodologías de Laboratorio</h5>
-                                    <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <p class="card-text"><small class="text-muted">Publicado hace 1 semana</small></p>
-                                </div>
+                        <div class="card-body p-4 p-md-5 text-center">
+                            <i class="bi bi-lightbulb display-3 text-primary mb-3"></i>
+                            <h2 class="card-title mb-3">Bienvenido a Lumi</h2>
+                            <p class="text-muted mb-4">Selecciona un tipo de usuario para simular el inicio de sesión.</p>
+                            
+                            <div class="d-grid gap-2">
+                                <a href="usuario_normal.html" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-person"></i> Entrar como Usuario Normal
+                                </a>
+                                <a href="usuario_publicador.html" class="btn btn-secondary btn-lg">
+                                    <i class="bi bi-pencil-square"></i> Entrar como Publicador
+                                </a>
+                                <a href="usuario_admin.html" class="btn btn-dark btn-lg">
+                                    <i class="bi bi-shield-lock"></i> Entrar como Administrador
+                                </a>
                             </div>
                         </div>
                     </div>
