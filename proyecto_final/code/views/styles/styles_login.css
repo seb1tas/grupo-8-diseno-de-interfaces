@@ -1,0 +1,64 @@
+        /* Paleta de colores pastel y personalización de Bootstrap */
+        :root {
+            --bs-font-sans-serif: 'Inter', sans-serif;
+            
+            /* Paleta Pastel */
+            --pastel-blue: #a0c4ff;
+            --pastel-mint: #b6e2d3;
+            --pastel-cream: #fefae0;
+            --pastel-pink: #ffc6d9;
+            --pastel-yellow: #fdfcdc;
+            --text-dark: #333;
+
+            /* Sobrescribir colores de Bootstrap */
+            --bs-primary: var(--pastel-blue);
+            --bs-primary-rgb: 160, 196, 255;
+            --bs-secondary: var(--pastel-mint);
+            --bs-secondary-rgb: 182, 226, 211;
+            --bs-light: var(--pastel-yellow);
+            --bs-light-rgb: 253, 252, 220;
+            --bs-body-bg: var(--pastel-cream);
+            --bs-body-color: var(--text-dark);
+            
+            --bs-border-radius: 0.5rem;
+            --bs-border-radius-lg: 0.75rem;
+            --bs-border-radius-sm: 0.25rem;
+        }
+
+        body {
+            font-family: var(--bs-font-sans-serif);
+            background-color: var(--bs-body-bg);
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: none;
+        }
+        
+        .btn-primary {
+             font-weight: 500;
+             color: var(--text-dark); /* Texto más oscuro para legibilidad sobre azul pastel */
+             border: none;
+        }
+        
+        .btn-primary:hover {
+            filter: brightness(95%);
+            color: black;
+        }
+
+        .btn-secondary {
+            font-weight: 500;
+            color: var(--text-dark);
+             border: none;
+        }
+        
+         .btn-secondary:hover {
+            filter: brightness(95%);
+            color: black;
+        }
