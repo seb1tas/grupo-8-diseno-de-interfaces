@@ -64,14 +64,15 @@
                 
                 <!-- Menú de Usuario (dinámico) -->
                 <ul class="navbar-nav ms-auto">
+
+                    <!-- *botones de aumentar y disminuir fuente -->
                     
-                    <!-- * aumentar letra -->
-                    <li>
-                        <button onclick="" class="btn btn-outline-secondary">-A</button>
-                    </li>
-                    <li>
-                        <button onclick="" class="btn btn-outline-secondary">+A</button>
-                    </li>
+                    <div class="btn-group ms-3">
+                        <button class="btn btn-outline-secondary" onclick="decreaseFont()">A-</button>
+                        <button class="btn btn-outline-secondary" onclick="resetFont()">A</button>
+                        <button class="btn btn-outline-secondary" onclick="increaseFont()">A+</button>
+                    </div>
+
                     <!-- * boton de modo oscuro -->
                     <li>
                         <button onclick="toggleTheme()" class="btn btn-outline-secondary">
