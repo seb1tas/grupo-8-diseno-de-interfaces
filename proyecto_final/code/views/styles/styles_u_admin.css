@@ -61,3 +61,76 @@
             filter: brightness(95%);
             color: black;
         }
+
+        /* Asegúrate de cargar este bloque después de Bootstrap.css */
+
+.btn-search {
+    position: relative;
+    overflow: hidden; /* importante para que el brillo no se salga */
+    border: none;
+    background: #0d6efd;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* mayor especificidad por si Bootstrap tiene reglas para botones en input-group */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* pseudo-elemento que crea el efecto giratorio y difuso */
+.btn-search::before {
+    content: "";
+    position: absolute;
+    inset: -30%;                 /* lo hacemos un poco más grande para el blur */
+    background: conic-gradient(
+        from 0deg,
+        #ff00ff,
+        #00ffff,
+        #ffae00,
+        #ff00ff
+    );
+    opacity: 0.9;
+    filter: blur(100px);
+    -webkit-filter: blur(20px);
+    z-index: 0;
+    pointer-events: none;        /* para no bloquear clicks */
+    transform-origin: 50% 50%;
+    will-change: transform;
+    animation: rotate 2s linear infinite;
+}
+
+/* contenido interno del botón (encima del pseudo-elemento) */
+.btn-search .btnInner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;                  /* por encima del :before */
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    backdrop-filter: blur(6px);  /* versión ligera para no exagerar */
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* pequeño efecto al hacer hover/click */
+.btn-search:hover .btnInner {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(13,110,253,0.25);
+}
+
+/* keyframes (ESTO ES OBLIGATORIO) */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Si Bootstrap fuerza un tamaño pequeño dentro de input-group, obliga el tamaño deseado */
+.input-group .btn-search {
+    min-width: 40px;
+    height: calc(1.5em + 0.75rem); /* ejemplo, que combine con el input */
+    padding: 6px 10px;
+}
