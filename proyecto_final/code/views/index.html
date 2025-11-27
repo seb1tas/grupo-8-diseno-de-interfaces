@@ -18,19 +18,11 @@
 
     <!-- modo oscuro-->
     <link rel="stylesheet" href="styles/modo_oscuro.css">
-    <script src="styles/modo_oscuro.js" defer></script>
+    <script src="js/modo_oscuro.js" defer></script>
 
-
-
-
-
-    
     <link rel="stylesheet" href="styles/styles_index.css">
 </head>
 <body>
-    <!-- modo oscuro-->
-     <button onclick="toggleTheme()" class="btn btn-secondary">
-  Modo Oscuro
 </button>
 
     <!-- Barra de Navegación Principal -->
@@ -60,7 +52,13 @@
                 
                 <!-- Menú de Usuario (dinámico) -->
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
+                    
+                    <!-- * boton de modo oscuro -->
+                    <li>
+                        <button onclick="toggleTheme()" class="btn btn-secondary"> modo oscuro
+                    </li>
+                    
+                    <li class="nav-item dropdown">   
                         <a class="nav-link dropdown-toggle" href="#" id="userMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i>
                             <span id="userMenuName" class="ms-1">Usuario</span>
