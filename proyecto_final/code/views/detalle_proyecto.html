@@ -18,31 +18,68 @@
 <body>
 
     <!-- Navbar igual a tu plantilla -->
+    <!-- Barra de Navegación Principal -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <img src="../assets/img/logo.ico" height="40">
-                LUMI
+                <div>
+                    <img src="../assets/img/logo.ico" alt="" class="" height="40px">
+                    LUMI
+                </div>
             </a>
-
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="bi bi-person-circle"></i> Admin
+                <!-- Links de navegación (se podrían ocultar/mostrar con JS) -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" id="nav-inicio">
+                            <i class="bi bi-house"></i> Inicio
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="usuario_admin.html">Panel</a></li>
-                            <li><a class="dropdown-item" href="index.html">Cerrar Sesión</a></li>
-                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="usuario_publicador.html" id="nav-publicar">
+                            <i class="bi bi-upload"></i> Publicar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="usuario_admin.html" id="nav-admin">
+                            <i class="bi bi-shield-lock"></i> Administrar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="nav-buscar">
+                            <i class="bi bi-search"></i> Buscar
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Menú de Usuario (dinámico) -->
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- *botones de aumentar y disminuir fuente -->
+                    
+                    <div class="btn-group ms-3">
+                        <button class="btn btn-outline-secondary" onclick="decreaseFont()">A-</button>
+                        <button class="btn btn-outline-secondary" onclick="resetFont()">A</button>
+                        <button class="btn btn-outline-secondary" onclick="increaseFont()">A+</button>
+                    </div>
+
+                    <!-- * boton de modo oscuro -->
+                    <li>
+                        <button onclick="toggleTheme()" class="btn btn-outline-secondary">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7625/7625513.png" alt="" height="20">
+                    </li>
+                    
+                    <li class="nav-item">   
+                        <a class="nav-link" href="login.html" id="userMenuLink" role="button">
+                            <i class="bi bi-person-circle"></i>
+                            <span id="userMenuName" class="ms-1">Acceder</span>
+                        </a>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
@@ -150,6 +187,8 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- accesibilidad -->
+    <script src="js/accesibilidad.js" defer></script>
 </body>
 
 </html>
