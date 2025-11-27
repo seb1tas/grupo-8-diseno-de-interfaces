@@ -24,7 +24,7 @@
             --bs-border-radius-lg: 0.75rem;
             --bs-border-radius-sm: 0.25rem;
         }
-
+  /* modificar este en el modo oscuro*/ 
         body {
             font-family: var(--bs-font-sans-serif);
             background-color: var(--bs-body-bg);

@@ -1,26 +1,82 @@
-.dark-mode {
+/* Fondo global de la página */
+.dark-mode body {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* El contenedor principal */
+.dark-mode main,
+.dark-mode .container,
+.dark-mode .row,
+.dark-mode .col,
+.dark-mode .col-md-3,
+.dark-mode .col-md-9 {
     background-color: #121212 !important;
     color: #fff !important;
 }
 
-/* Tarjetas */
+/* Sidebar / Tarjetas */
 .dark-mode .card {
     background-color: #1e1e1e !important;
-    color: #fff !important;
+    color: #ffffff !important;
+    border-color: #333 !important;
 }
 
-/* Navbar */
-.dark-mode .navbar {
-    background-color: #1f1f1f !important;
-}
-
-/* Listas */
+/* Elementos de lista */
 .dark-mode .list-group-item {
     background-color: #1e1e1e !important;
     color: #fff !important;
+    border-color: #333 !important;
 }
 
-/* Links */
+/* Texto de enlaces */
 .dark-mode a {
-    color: #9cd3ff !important;
+    color: #94c9ff !important;
+}
+
+/* Fondos "light" de Bootstrap que se quedan claros */
+.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+}
+
+/* Cabecera de tarjeta */
+.dark-mode .card-header {
+    background-color: #2a2a2a !important;
+    color: #fff !important;
+}
+
+/* Dropdown menú */
+.dark-mode .dropdown-menu {
+    background-color: #1f1f1f !important;
+    color: #fff !important;
+}
+
+/* Elementos de dropdown */
+.dark-mode .dropdown-item {
+    color: #fff !important;
+}
+
+.dark-mode .dropdown-item:hover {
+    background-color: #333 !important;
+}
+
+/* Botón toggle modo oscuro */
+.dark-mode .btn-secondary {
+    background-color: #333 !important;
+    border-color: #444 !important;
+}
+
+/* NAVBAR */
+.dark-mode .navbar {
+    background-color: #1a1a1a !important;
+}
+
+/* Tarjetas de artículo con imagen al lado */
+.dark-mode .card .col-md-9 {
+    background-color: #1e1e1e !important;
+}
+
+/* Los textos "Publicado hace..." */
+.dark-mode small.text-muted {
+    color: #cccccc !important;
 }
